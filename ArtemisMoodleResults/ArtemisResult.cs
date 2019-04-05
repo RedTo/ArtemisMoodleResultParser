@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FileHelpers;
+﻿using FileHelpers;
 
 namespace ArtemisMoodleResults
 {
+    /**
+     * ArtemisResult represents a entry in the artemis csv file.
+     */
     [DelimitedRecord(",")]
-    class ArtemisResult
+    internal class ArtemisResult
     {
         public string Name;
         public string Username;

@@ -2,8 +2,11 @@
 
 namespace ArtemisMoodleResults
 {
+    /**
+     * MoodleResult represents a entry in the moodle csv file.
+     */
     [DelimitedRecord(";")]
-    class MoodleResult
+    internal class MoodleResult
     {
         public string FirstName;
         public string LastName;
