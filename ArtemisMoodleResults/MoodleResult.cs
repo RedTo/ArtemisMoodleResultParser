@@ -10,8 +10,7 @@ namespace ArtemisMoodleResults
         public string ID;
         public string University;
         public string Faculty;
-        //public string Unused;
         public string Score;
-        public string Unused2;
+        public string LastMoodleExport;
     }
 }

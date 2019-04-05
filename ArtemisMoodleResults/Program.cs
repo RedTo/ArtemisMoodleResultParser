@@ -54,9 +54,7 @@ namespace ArtemisMoodleResults
                 } else if (m.Score.Equals("-")) {
                     m.Score = (0).ToString("N2", CultureInfo.InvariantCulture);
                 }
-                builder.Append(m.FirstName + "," + m.LastName + "," + m.ID + "," + m.University + "," + m.Faculty + ","
-                    // + m.Unused + ","
-                    + m.Score + "," + m.Unused2 + "\n");
+                builder.Append(m.FirstName + "," + m.LastName + "," + m.ID + "," + m.University + "," + m.Faculty + "," + m.Score + "," + m.LastMoodleExport + "\n");
             }
             File.WriteAllText(outputFile, builder.ToString());
             Exit("Finished parsing... You will find the import file here: " + outputFile);
