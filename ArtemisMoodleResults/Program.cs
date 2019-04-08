@@ -53,7 +53,8 @@ namespace ArtemisMoodleResults
 
             //for each moodle result search in artemis file for corresponding entry
             foreach (MoodleResult m in moodle) {
-                var artemisResult = artemis.FirstOrDefault(o => o.Name.Equals(m.FirstName + " " + m.LastName));
+                //Remove " from firstname and lastname (double names should be also handled right)
+                var artemisResult = artemis.FirstOrDefault(o => o.Name.Equals(m.FirstName.Replace("\"", "") + " " + m.LastName.Replace("\"", "")));
                 if (artemisResult != null) {
                     //get the score for existing artemis entry and divide by 10
                     var score = double.Parse(artemisResult.Score.Trim()) / 10.0;
